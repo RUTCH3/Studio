@@ -1,0 +1,8 @@
+<div>
+    <input type="text" [(ngModel)]="userName" placeholder="שם משתמש" />
+    <input type="text" [(ngModel)]="password" placeholder="סיסמא" />
+    <label *ngIf="errorMessage" style="color: red;">
+        {{ errorMessage }}
+    </label>
+    <button (click)="login()">כניסה</button>
+</div>
