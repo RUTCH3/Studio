@@ -9,14 +9,23 @@ export class AuthService {
   constructor() { }
 
   login(userType: 'secretry' | 'teacher'): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
     sessionStorage.setItem(this.userTypeKey, userType);
   }
 
   isLoggedIn(): boolean {
+    if (typeof window === 'undefined') {
+      return false;
+    }
     return sessionStorage.getItem(this.userTypeKey) !== null;
   }
 
   getUserType(): 'secretry' | 'teacher' | null {
+    if (typeof window === 'undefined') {
+      return null;
+    }
     let userType = sessionStorage.getItem(this.userTypeKey) as 'secretry' | 'teacher' | null;
     return userType;
   }
@@ -27,6 +36,9 @@ export class AuthService {
   }
 
   logout(): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
     sessionStorage.removeItem(this.userTypeKey);
   }
 }

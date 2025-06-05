@@ -1,19 +1,5 @@
 <div class="lesson-grid">
-  <mat-grid-list cols="3" gutterSize="20px" rowHeight="1:1" *ngIf="lessons.length">
-    <mat-grid-tile *ngFor="let lesson of lessons">
-      <app-lesson-details></app-lesson-details>
-      <!-- <mat-card class="lesson-card">
-        <mat-card-header>
-          <mat-card-title>{{ lesson.title }}</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image [src]="lesson.imageUrl" alt="{{ lesson.title }}">
-        <mat-card-content>
-          <p>{{ lesson.description }}</p>
-        </mat-card-content>
-      </mat-card> -->
-    </mat-grid-tile>
-  </mat-grid-list>
-</div>
-<div>
-
+  <div class="gallery" *ngFor="let l of lessons">
+    <app-lesson-details [lesson]="l"></app-lesson-details>
+  </div>
 </div>

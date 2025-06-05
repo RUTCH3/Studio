@@ -1,3 +1,36 @@
-<h1>Home Page</h1>
-<!-- <button click="goToLogin()">כניסה</button> -->
-<button mat-raised-button color="primary" (click)="goToLogin()">התחברות</button>
+<div class="home-container">
+    <div class="home-content">
+        <h1>ברוכים הבאים למערכת סטודיו להתעמלות וכושר</h1>
+        <p>
+            הצטרפו אלינו לחוויית אימון מקצועית, מהנה ומעצימה.<br>
+            מגוון חוגים, מאמנים מוסמכים ואווירה משפחתית מחכים לכם!
+        </p>
+        <mat-card class="home-card">
+            <mat-card-header>
+            <mat-card-title>הצטרפו אלינו!</mat-card-title>
+            <mat-card-subtitle>אימונים לכל הרמות ולכל הגילאים</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+            <ul class="features-list">
+                <li>
+                <mat-icon color="primary">fitness_center</mat-icon>
+                חוגי התעמלות מגוונים
+                </li>
+                <li>
+                <mat-icon color="accent" class="feature-icon">groups</mat-icon>
+                צוות מאמנים מוסמך ומנוסה
+                </li>
+                <li>
+                <mat-icon color="warn">favorite</mat-icon>
+                יחס אישי ואווירה משפחתית
+                </li>
+            </ul>
+            </mat-card-content>
+            <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="goToLogin()">
+                התחברות
+            </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

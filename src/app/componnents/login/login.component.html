@@ -1,8 +1,25 @@
-<div>
-    <input type="text" [(ngModel)]="userName" placeholder="שם משתמש" />
-    <input type="text" [(ngModel)]="password" placeholder="סיסמא" />
-    <label *ngIf="errorMessage" style="color: red;">
-        {{ errorMessage }}
-    </label>
-    <button (click)="login()">כניסה</button>
+<div style="max-width: 350px; margin: 40px auto;">
+    <mat-card>
+        <mat-card-content>
+            <form>
+                <mat-form-field appearance="fill" style="width: 100%;">
+                    <mat-label>שם משתמש</mat-label>
+                    <input matInput type="text" [(ngModel)]="userName" name="userName" />
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" style="width: 100%;">
+                    <mat-label>סיסמא</mat-label>
+                    <input matInput type="password" [(ngModel)]="password" name="password" />
+                </mat-form-field>
+
+                <mat-error *ngIf="errorMessage">
+                    {{ errorMessage }}
+                </mat-error>
+
+                <div style="text-align: left; margin-top: 16px;">
+                    <button mat-raised-button color="primary" (click)="login()">כניסה</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
 </div>

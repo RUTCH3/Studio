@@ -1,0 +1,8 @@
+
+
+.ag-row.unpaid-row {
+    background-color: #ffcccc !important;
+    border: 1px solid #ff0000 !important; /* אדום */
+    color: #4a8490 !important; /* שחור */
+    /* אדום בהיר */
+}

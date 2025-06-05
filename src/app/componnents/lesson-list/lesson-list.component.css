@@ -1,27 +1,17 @@
+/* גלריה של שיעורים */
+.lesson-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    padding: 24px;
+}
+
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.lesson-card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    background-color: #fff;
-}
-
-.lesson-card:hover {
-    transform: scale(1.03);
-}
-
-.lesson-card img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    min-width: 280px;
+    max-width: 350px;
 }
